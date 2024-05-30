@@ -44,5 +44,6 @@
   "/.deco/blocks/deco-htmx.json": {
     "blockType": "apps",
     "__resolveType": "site/apps/deco/htmx.ts"
-  }
+  },
+  "/.deco/blocks/deco-records.json": null
 }
