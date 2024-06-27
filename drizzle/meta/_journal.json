@@ -15,6 +15,13 @@
       "when": 1717102103227,
       "tag": "0001_polite_sheva_callister",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1717795835614,
+      "tag": "0002_hesitant_star_brand",
+      "breakpoints": true
     }
   ]
 }

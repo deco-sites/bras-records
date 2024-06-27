@@ -1,1 +1,17 @@
-{"name":"Home","path":"/","sections":[{"__resolveType":"site/sections/ItWorks.tsx","name":"It Works!"},{"__resolveType":"Footer"}],"__resolveType":"website/pages/Page.tsx"}
+{
+  "name": "Home",
+  "path": "/",
+  "sections": [
+    {
+      "__resolveType": "site/sections/ManageProfiles.tsx"
+    },
+    {
+      "__resolveType": "site/sections/ItWorks.tsx",
+      "name": "It Works!"
+    },
+    {
+      "__resolveType": "Footer"
+    }
+  ],
+  "__resolveType": "website/pages/Page.tsx"
+}
