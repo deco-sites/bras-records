@@ -9,17 +9,24 @@ type ProfileInsert = typeof profiles.$inferInsert;
 type ProfilesKeys = keyof ProfileInsert;
 type ProfileValue<K extends keyof ProfileInsert> = ProfileInsert[K];
 
+const profileProps: Record<ProfilesKeys, ProfileInsert[ProfilesKeys][]> = {
+  name: [""],
+  email: ["", undefined, null],
+  id: [0],
+  phone: ["", undefined, null],
+};
+
 /**
  * Checa se key é chave valida do tipo profile
  */
 const isProfilePropKey = (
   key: string,
-): key is ProfilesKeys => key in profiles.$inferInsert;
+): key is ProfilesKeys => key in profileProps;
 const isProfilePropType = (
   key: ProfilesKeys,
   value: unknown,
 ): value is ProfileValue<typeof key> =>
-  typeof value === typeof profiles.$inferInsert[key];
+  profileProps[key]?.some((v) => typeof v === typeof value);
 
 interface Props {
   mode?: "create" | "delete";
@@ -34,11 +41,10 @@ export async function loader(
   const drizzle = await invoke.records.loaders.drizzle();
 
   if (mode === "create" && req.body) {
-    const newProfile: Partial<typeof profiles.$inferInsert> = {};
+    const newProfile: Partial<ProfileInsert> = {};
     const formData = await req.formData();
     formData.forEach((value, key) =>
-      isProfilePropKey(key) &&
-      isProfilePropType(key, value) &&
+      isProfilePropKey(key) && isProfilePropType(key, value) &&
       (newProfile[key] = value as any)
     );
 
