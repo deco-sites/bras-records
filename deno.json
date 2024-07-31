@@ -1,7 +1,7 @@
 {
   "imports": {
     "site/": "./",
-    "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.75.1/",
+    "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.81.0/",
     "apps/": "https://denopkg.com/deco-cx/apps@b6c627eacd99f70574becf6ec41fe5d9cb2eadb3/",
     "$fresh/": "https://deno.land/x/fresh@1.6.8/",
     "preact": "https://esm.sh/preact@10.22.0",
@@ -12,7 +12,7 @@
     "std/": "https://deno.land/std@0.190.0/",
     "partytown/": "https://denopkg.com/deco-cx/partytown@0.4.8/",
     "daisyui": "npm:daisyui@4.4.19",
-    "@deco/htmx": "https://denopkg.com/deco-cx/apps@0.47.5/htmx/mod.ts",
+    "@deco/htmx": "https://denopkg.com/deco-cx/apps@0.53.4/htmx/mod.ts",
     "drizzle-orm": "https://esm.sh/drizzle-orm@0.32.0",
     "drizzle-orm/": "https://esm.sh/drizzle-orm@0.32.0/",
     "drizzle-kit": "https://esm.sh/drizzle-kit@0.23.0"
